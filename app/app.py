@@ -78,7 +78,7 @@ class Hello(Resource):
 api.add_resource(Hello, '/')
 
 class GenPass(Resource):
-    def post(self):
+    def get(self):
         parser = reqparse.RequestParser()  
         parser.add_argument('phrase', required=True)
         parser.add_argument('key', required=True)
