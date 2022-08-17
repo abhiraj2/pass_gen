@@ -1,0 +1,6 @@
+#requirements.txt
+
+gunicorn==20.0.4
+flask
+flask-restful
+numpy
