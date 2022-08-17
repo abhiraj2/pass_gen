@@ -90,7 +90,7 @@ class GenPass(Resource):
             'pass' : pas,
             'return' : 200
         }
-        return jsonify(dic)
+        return dic
 
 api.add_resource(GenPass, '/genpass')
 
