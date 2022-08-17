@@ -94,3 +94,5 @@ class GenPass(Resource):
 
 api.add_resource(GenPass, '/genpass')
 
+if __name__ == '__main__':
+    app.run(debug)
