@@ -78,7 +78,7 @@ class Hello(Resource):
 api.add_resource(Hello, '/')
 
 class GenPass(Resource):
-    def get(self):
+    def post(self):
         parser = reqparse.RequestParser()  
         parser.add_argument('phrase', required=True)
         parser.add_argument('key', required=True)
@@ -90,9 +90,9 @@ class GenPass(Resource):
             'pass' : pas,
             'return' : 200
         }
-        return dic
+        return jsonify(dic)
 
 api.add_resource(GenPass, '/genpass')
 
 if __name__ == '__main__':
-    app.run(debug)
+    app.run()
